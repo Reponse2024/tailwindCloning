@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Cloning with Tailwind</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSSB Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .sticky-nav {
+        top: 0;
+        z-index: 50;
+      }
+      .nav-link {
+        @apply pb-1 border-b-2 border-transparent hover:border-orange-400;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f1f6fa] font-sans">
+    <!-- Top Bar: Socials and Services -->
+    <div class="w-full bg-[#eaf5fb] text-sm">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center py-2">
+          <!-- Social Icons -->
+          <div class="flex space-x-4 text-blue-900" >
+            <a href="#" class="h-4 w-4"><img src="images/in.svg" alt="in" ></a>
+            <a href="#" class="h-4 w-4"><img src="images/twit.svg" alt="X"></a>
+            <a href="#" class="h-2 w-2"><img src="images/fb.svg" alt="fb"></a>
+            <a href="#" class="h-4 w-4"><img src="images/yutube.svg" alt="yt"></a>
+            <a href="#" class="h-4 w-4"><img src="images/ig.svg" alt="ig"></a>
+          </div>
+
+          <!-- Right Section: Services -->
+          <div class="flex space-x-6 items-center">
+            <a href="#" class="text-gray-800">Online Services ▾</a>
+            <a href="#" class="text-gray-800">Publications</a>
+          </div>
+        </div>
+
+        <!-- Logo + Contact Row -->
+        <div class="flex justify-between items-center py-3">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="images/logo.png" alt="RSSB Logo" class="h-28 w-38" />
+          </div>
+
+          <!-- Contact Info -->
+          <div class="flex space-x-6 items-center text-blue-800 text-2xl">
+            <div class="flex items-center space-x-2">
+              <span class="text-blue-900">📞 4044</span>br
+              <span class="text-xs text-gray-800">Toll free lines</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span>✉️ info@rssb.rw</span>
+              <span class="text-xs text-gray-800">Reach to us</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <div class="sticky sticky-nav w-full bg-[#f1f6fa]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-[#1e2f98] text-white rounded-md">
+          <div class="flex items-center justify-between py-8">
+            <!-- Desktop Nav -->
+            <nav class="w-full md:w-auto md:flex md:space-x-6 text-sm font-medium px-14">
+              <a href="#" class="border-b-2 border-orange-400 pb-1 w-12">HOME</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1 " >SCHEMES</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1">INVESTMENT</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1">MANAGEMENT</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1">ABOUT</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1">CAREERS</a>
+              <a href="#" class="nav-link hover:border-b-2 border-orange-400 pb-1">NEWS & EVENTS</a>
+            </nav>
+
+            <!-- Hamburger Icon -->
+            <div class="md:hidden">
+              <button>
+                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section with Background Image -->
+    <section class="bg-[#eaf0f5] relative">
+      <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between items-center relative z-10">
+        <!-- Text Content -->
+        <div class="md:w-1/2 space-y-4">
+          <h1 class="text-xl md:text-2xl font-sans text-[#1e2f90]">
+            <span class="text-yellow-600 font-bold">Member First</span>, data-driven, evidence-based and high performing organization.
+          </h1>
+          <p class="font-bold text-[#1e2f98] uppercase">Members First</p>
+          <button class="mt-4 bg-[#1e2f98] text-white font-semibold px-6 py-3 rounded-md">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <!-- Background Image -->
+      <div class="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right opacity-20 md:opacity-100" style="background-image: url('path-to-hero-image.jpg');"></div>
+    </section>
+  <!-- Section with divisions -->
+   <div class="bg-gray-100 py-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-l border-t border-gray-200 bg-white shadow-lg rounded-lg overflow-hidden">
+
+    <div class="p-8 border-r border-b border-gray-200 transition-transform duration-300 hover:-translate-y-1">
+      <div class="text-blue-700 mb-4 flex justify-start">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-3-3H8a3 3 0 00-3 3v2h5m-9 0h9V6a3 3 0 00-3-3H4a3 0 00-3 3v14zm0 0l-1 1" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2 text-left">Member First</h3>
+      <p class="text-blue-700 font-bold mb-1 text-left">13 Million</p>
+      <p class="text-gray-600 text-sm text-left">of Rwandans are covered by RSSB services</p>
+    </div>
+
+    <div class="p-8 border-r border-b border-gray-200 transition-transform duration-300 hover:-translate-y-1">
+      <div class="text-blue-700 mb-4 flex justify-start">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8L11 2m7 17h-1l-3-3H8V8h1l3 3V2l-7 7v10h10a2 2 0 002-2v-3" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2 text-left">Experience</h3>
+      <p class="text-blue-700 font-bold mb-1 text-left">60 years</p>
+      <p class="text-gray-600 text-sm text-left">of service for your safety and well-being.</p>
+    </div>
+
+    <div class="p-8 border-r border-b border-gray-200 transition-transform duration-300 hover:-translate-y-1">
+      <div class="text-blue-700 mb-4 flex justify-start">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2 text-left">Branches</h3>
+      <p class="text-gray-600 text-sm text-left">Our services decentralized in <span class="text-blue-700 font-bold">30 branches</span> for your satisfaction</p>
+    </div>
+
+    <div class="p-8 border-r border-b border-gray-200 transition-transform duration-300 hover:-translate-y-1">
+      <div class="text-blue-700 mb-4 flex justify-start">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2 text-left">Data Driven</h3>
+      <p class="text-gray-600 text-sm text-left">Learning from our data to improve the services offered to our members</p>
+    </div>
+
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-24 text-center">
+    <p class="text-4xl md:text-4xl font-bold leading-tight text-gray-700">
+      Optimistic and forward-looking <br class="hidden sm:inline"> agent of central government, working to achieve
+      <br><span class="text-blue-900">the financial security and health of <br class="hidden sm:inline"> all Rwandans.</span>
+    </p>
+  </div>
+</div>
+  </body>
 </html>
